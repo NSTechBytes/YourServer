@@ -1,72 +1,51 @@
 # YourServer
 
-`YourServer` is a lightweight web server application that serves files from a local directory, with the added functionality of being able to hide the server window into the system tray. It uses Python, Tkinter for the graphical user interface, and PyStray for tray icon management.
+A lightweight Python-based HTTP server with a GUI and system tray integration.
 
 ## Features
-- Starts a local web server to serve files from the `documentation` directory.
-- Runs on an available port dynamically (avoids port conflicts).
-- Customizable and minimalist GUI built with Tkinter.
-- Option to hide the server window to the system tray.
-- Cross-platform compatible (tested on Windows).
 
-## Requirements
-- Python 3.x
-- `pystray` for system tray functionality
-- `Pillow` for image handling
-- `Tkinter` (usually pre-installed with Python)
+- Serves static files from the `documentation` directory.
+- Automatically finds an available port starting from 2100.
+- Minimal GUI for controlling the server.
+- System tray integration to minimize the application.
 
-## Installation
+## Prerequisites
 
-1. Clone this repository:
+Ensure you have Python installed (Python 3.x recommended). Install the required dependencies:
 
-   ```bash
-   git clone https://github.com/yourusername/YourServer.git
+```sh
+pip install pystray pillow
+```
+
+## How to Run
+
+1. Clone the repository or copy the script to your local machine.
+2. Run the script:
+   ```sh
+   python yourserver.py
    ```
-
-2. Navigate into the project directory:
-
-   ```bash
-   cd YourServer
-   ```
-
-3. Install the required dependencies:
-
-   ```bash
-   pip install pystray pillow
-   ```
+3. The server will start and be accessible at `http://localhost:<port>`.
 
 ## Usage
 
-1. Place the `documentation` directory in the same directory as the Python script, or modify the `DIRECTORY` variable to point to the correct folder.
-   
-2. Run the server script:
+- The application automatically looks for an available port.
+- The GUI allows minimizing to the system tray.
+- Click "Hide to Tray" to send the app to the system tray.
+- Right-click the tray icon to show the window or exit the app.
 
-   ```bash
-   python yourserver.py
-   ```
+## Directory Structure
 
-3. The server will start running and be accessible at:
-   ```
-   http://localhost:2100
-   ```
+```
+.
+├── yourserver.py      # Main script
+├── documentation  # Folder to serve files from
+```
 
-   If port 2100 is already in use, the server will automatically try the next available port.
+## Troubleshooting
 
-4. The window can be hidden to the system tray by clicking the "Hide to Tray" button, and can be restored from there by clicking "Show".
-
-5. The application can be exited from the system tray or by clicking the close button on the window.
-
-
-## Contributing
-
-If you would like to contribute to `YourServer`, feel free to fork this repository, create a new branch, and submit a pull request with your improvements or bug fixes.
+- If the `documentation` directory does not exist, the script will create it.
+- If port 2100 is in use, the application will automatically find an available port.
 
 ## License
 
-This project is open-source and available under the [Apache License](LICENSE).
-
-## Acknowledgements
-
-- **Tkinter**: For building the GUI.
-- **PyStray**: For managing system tray icons.
-- **Pillow**: For image creation and manipulation.
+This project is licensed under the MIT License. Contributions are welcome! Feel free to open an issue or submit a pull request if you have any improvements or feature requests.
