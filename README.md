@@ -48,4 +48,4 @@ pip install pystray pillow
 
 ## License
 
-This project is licensed under the MIT License. Contributions are welcome! Feel free to open an issue or submit a pull request if you have any improvements or feature requests.
+This project is licensed under the Apache License. Contributions are welcome! Feel free to open an issue or submit a pull request if you have any improvements or feature requests.
